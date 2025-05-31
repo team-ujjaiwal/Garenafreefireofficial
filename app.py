@@ -8,7 +8,7 @@ app = Flask(__name__)
 executor = ThreadPoolExecutor(max_workers=10)
 
 def fetch_player_info(uid, region):
-    player_info_url = f'https://as-info.onrender.com/player-info?uid={uid}&region={region}'
+    player_info_url = f'https://free-fire-info-site.vercel.app/player-info?uid={uid}&region={region}'
     response = requests.get(player_info_url)
     if response.status_code == 200:
         return response.json()
